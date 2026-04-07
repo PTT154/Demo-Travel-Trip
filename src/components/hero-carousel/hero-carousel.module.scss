@@ -41,30 +41,30 @@
 
 // --- PHẦN INDICATORS (CHẤM TRÒN) BÊN PHẢI ---
 .indicatorsCustom {
-    flex-direction: column; // Xếp dọc
-    right: 24px; // Cách mép phải 24px
-    left: auto; // Bỏ căn trái mặc định
-    top: 50%; // Căn giữa dọc
-    bottom: auto; // Bỏ căn dưới mặc định
-    transform: translateY(-50%); // Offset để chính xác giữa dọc
-    gap: 10px; // Khoảng cách giữa các chấm
-    z-index: 10;
+    flex-direction: column !important; // Xếp dọc
+    right: 24px !important; // Cách mép phải 24px
+    left: auto !important; // Bỏ căn trái mặc định
+    top: 50% !important; // Căn giữa dọc
+    bottom: auto !important; // Bỏ căn dưới mặc định
+    transform: translateY(-50%) !important; // Offset để chính xác giữa dọc
+    gap: 10px !important; // Khoảng cách giữa các chấm
+    z-index: 10 !important;
 }
 
 @media (max-width: 768px) {
     .indicatorsCustom {
-        right: 12px; // Giảm khoảng cách khi ở mobile
+        right: 12px !important; // Giảm khoảng cách khi ở mobile
     }
 }
 
 .indicatorDot {
-    width: 8px;
-    height: 34px;
-    background-color: rgba(255, 255, 255, 0.6);
+    width: 8px !important;
+    height: 34px !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
     transition: all 0.2s ease;
-    border-radius: 100px;
+    border-radius: 100px !important;
 
     &[data-active] {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 } 
