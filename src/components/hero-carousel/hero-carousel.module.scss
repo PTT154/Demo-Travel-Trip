@@ -1,0 +1,70 @@
+.carouselWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carouselRoot {
+    height: 100%;
+}
+
+.carouselContainer {
+    height: 100%;
+}
+
+.slide {
+    height: 100%;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3); // Tùy chỉnh độ tối ở đây
+        z-index: 1; // Above image, below contentOverlay text
+    }
+}
+
+.contentOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none; // Để không cản trở việc click vào carousel nếu cần
+
+    // Cho phép các con bên trong nhận click lại
+    h1, p, button, a {
+        pointer-events: auto;
+    }
+}
+
+// --- PHẦN INDICATORS (CHẤM TRÒN) BÊN PHẢI ---
+.indicatorsCustom {
+    flex-direction: column; // Xếp dọc
+    right: 24px; // Cách mép phải 24px
+    left: auto; // Bỏ căn trái mặc định
+    top: 50%; // Căn giữa dọc
+    bottom: auto; // Bỏ căn dưới mặc định
+    transform: translateY(-50%); // Offset để chính xác giữa dọc
+    gap: 10px; // Khoảng cách giữa các chấm
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .indicatorsCustom {
+        right: 12px; // Giảm khoảng cách khi ở mobile
+    }
+}
+
+.indicatorDot {
+    width: 8px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+    border-radius: 100px;
+
+    &[data-active] {
+        background-color: #fff;
+    }
+} 

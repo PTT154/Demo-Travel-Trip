@@ -1,0 +1,123 @@
+.searchBarWrapper {
+  background: white;
+  height: 64px;
+  border-radius: 100px;
+  // Padding 8px để ôm sát nút Search màu xanh như trong ảnh
+  padding: 8px; 
+  width: 100%;
+  max-width: 800px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  pointer-events: auto; // Cho phép tương tác toàn bộ thanh
+}
+
+.searchInner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+// --- 1. PHẦN LOCATION ---
+.locationField {
+  padding-left: 16px; 
+  padding-right: 16px;
+  flex-shrink: 0;
+  color: #333;
+}
+
+.locationIcon {
+  color: #333; // Đảm bảo icon có màu xám đen
+}
+
+.fieldContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  width: 1px;
+  height: 40px; 
+  background-color: #e0e0e0;
+  margin: 0 8px;
+}
+
+// --- 2. PHẦN INPUT ---
+.searchInput {
+  flex: 1; // Chiếm toàn bộ khoảng trống còn lại
+  min-width: 0; // Tránh vỡ layout trên mobile
+  
+  :global(.mantine-TextInput-root),
+  :global(.mantine-TextInput-wrapper),
+  :global(.mantine-TextInput-input) {
+    height: 100%;
+  }
+
+  :global(.mantine-TextInput-input) {
+    font-weight: 500;
+    padding-left: 16px;
+    font-size: 16px; 
+    &::placeholder {
+      color: #999;
+    }
+  }
+}
+
+// --- 3. PHẦN NÚT SEARCH ---
+.searchBtn {
+  background-color: #0b5d3a;
+  color: white;
+  border: none;
+  height: 100%;
+  padding: 0 32px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; // Khoảng cách giữa icon và chữ
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  flex-shrink: 0; // Không cho nút bị méo
+
+  &:hover {
+    background-color: #084a2e;
+  }
+}
+
+// ==========================================
+// RESPONSIVE MOBILE TỐI ƯU
+// ==========================================
+@media (max-width: 768px) {
+  .searchBarWrapper {
+    height: 60px; // Thấp xuống một chút trên đt
+  }
+
+  .fieldContent, .divider {
+    display: none; // Ẩn chữ "Where to go" và vạch kẻ
+  }
+
+  .locationField {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .searchInput {
+    :global(.mantine-TextInput-input) {
+      padding-left: 8px;
+      font-size: 14px;
+    }
+  }
+
+  .searchBtn {
+    padding: 0;
+    width: 48px; // Biến nút thành hình tròn nhỏ gọn
+    height: 48px;
+    
+    .btnText {
+      display: none; // Ẩn chữ "Search"
+    }
+    
+    .searchIcon {
+      margin: 0; // Căn giữa icon trong nút tròn
+    }
+  }
+}

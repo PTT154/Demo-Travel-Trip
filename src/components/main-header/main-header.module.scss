@@ -1,0 +1,118 @@
+.headerWrapper {
+    width: 100%;
+    // background-color: white;
+    // Bỏ comment 2 dòng dưới nếu muốn Header dính chặt trên cùng khi cuộn trang
+    // position: sticky;
+    // top: 0;
+    // z-index: 1000;
+}
+
+// --- HÀNG 1: NỀN TRẮNG ---
+.topRow {
+    height: 80px;
+    // background-color: #ffffff;
+}
+
+.customizedBtn {
+    background-color: var(--brand-green);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+}
+
+.logoLink {
+    text-decoration: none;
+}
+
+.logoText {
+    color: var(--brand-green);
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 800;
+    font-family: var(--font-heading); // Kế thừa font Montserrat
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+}
+
+.rightSection {
+    display: flex; // Đảm bảo nó là flex
+    gap: 20px; // Mặc định cho màn hình lớn (sm trở lên)
+
+    @media (max-width: 768px) {
+        gap: 8px !important; // Thu nhỏ lại khi ở mobile
+    }
+
+    .searchIcon {
+        border-color: var(--brand-green);
+        color: var(--brand-green);
+
+        &:hover {
+            background-color: rgba(11, 93, 58, 0.05);
+        }
+    }
+
+    .menuIcon {
+        color: var(--brand-green);
+    }
+}
+
+// --- HÀNG 2: NỀN XANH LÁ ---
+.bottomRow {
+    height: 40px;
+    background-color: var(--brand-green);
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &:hover {
+        color: var(--brand-light-green);
+    }
+}
+
+.active {
+    color: var(--brand-light-green);
+}
+
+// --- RESPONSIVE MOBILE TỰ ĐỘNG ẨN ---
+@media (max-width: 768px) {
+    .btnContainer {
+        display: none !important; // Ẩn nút Customizes Tours và Kính lúp
+    }
+
+    .topRow {
+        height: 60px; // Thu nhỏ chiều cao hàng trên cho gọn
+    }
+
+    .navGroup {
+        gap: 16px; // Giảm khoảng cách các link
+        overflow-x: auto; // Cho phép vuốt ngang nếu menu quá dài
+    }
+
+    .navLink {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    .searchIcon {
+        display: none !important; // Ẩn nút Customizes Tours và Kính lúp
+    }
+}

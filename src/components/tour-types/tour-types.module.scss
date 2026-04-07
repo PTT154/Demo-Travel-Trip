@@ -1,0 +1,147 @@
+.wrapper {
+  padding: 60px 0;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.title {
+  color: #0b4d32;
+  font-size: 2.5rem;
+  font-weight: 700;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  color: #637381;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  flex: 1;
+  max-width: 600px;
+}
+
+.carouselWrapper {
+  position: relative;
+  padding: 0 40px; /* space for arrows */
+}
+
+.carouselControl {
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  color: #454f5b;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #f4f6f8;
+  }
+
+  /* Right arrow specific styles based on design (green background) */
+  &:last-child {
+    background-color: #0d8a39; /* bright green */
+    border-color: #0d8a39;
+    color: white;
+
+    &:hover {
+      background-color: #0a692b;
+    }
+  }
+}
+
+.carouselControls {
+  /* To place arrows outside */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  width: calc(100% + 120px);
+  margin-left: -60px;
+  pointer-events: none;
+
+  & > * {
+    pointer-events: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  @media (max-width: 1200px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTitle {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: auto; /* center vertically */
+}
