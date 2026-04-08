@@ -1,50 +1,73 @@
 'use client';
 
-import { Group, ActionIcon, UnstyledButton, Text, Box, Container } from '@mantine/core';
+import { Group, ActionIcon, Text, Box, Container } from '@mantine/core';
 import { IoSearch } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import classes from './main-header.module.scss';
 import Link from 'next/link';
 import type { Route } from 'next';
 
-export default function MainHeader() {
-    const navLinks = [
-        { label: 'HOME', href: '/', active: true },
-        { label: 'TOUR', href: '/tour' },
-        { label: 'DESTINATION', href: '/destination' },
-        { label: 'SERVICES', href: '/services' },
-        { label: 'ABOUT US', href: '/about' },
-    ];
+const NAV_LINKS = [
+    { label: 'Home', href: '/', active: true },
+    { label: 'Tour', href: '/tour' },
+    { label: 'Destination', href: '/destination' },
+    { label: 'Services', href: '/services' },
+    { label: 'About Us', href: '/about' },
+];
 
+const SOCIAL_LINKS = [
+    { icon: <FaFacebookF size={20} />, href: 'https://facebook.com', label: 'Facebook' },
+    { icon: <FaInstagram size={20} />, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: <FaWhatsapp size={22} />, href: 'https://whatsapp.com', label: 'Whatsapp' },
+    { icon: <FaYoutube size={22} />, href: 'https://youtube.com', label: 'Youtube' },
+];
+
+export default function MainHeader() {
     return (
         <header className={classes.headerWrapper}>
-            {/* HÀNG 1: NỀN TRẮNG (Logo, Button, Icons) */}
+            {/* HÀNG 1: Logo & Socials */}
             <div className={classes.topRow}>
-                <Container size="xl" h="100%">
+                <Container size={1232} h="100%">
                     <Group justify="space-between" align="center" h="100%" wrap="nowrap">
-                        {/* Bên trái: Nút Customized Tours */}
-                        <Box style={{ flex: 1 }} className={classes.btnContainer}>
-                            <button className={classes.customizedBtn}>
-                                CUSTOMIZED TOURS
-                            </button>
+
+                        {/* BÊN TRÁI: Social Icons */}
+                        <Box className={classes.btnContainer} style={{ flex: 1 }}>
+                            <Group gap="xs">
+                                {SOCIAL_LINKS.map((social) => (
+                                    <ActionIcon
+                                        key={social.label}
+                                        component="a"
+                                        href={social.href}
+                                        target="_blank"
+                                        variant="subtle"
+                                        radius="xl"
+                                        size="lg"
+                                        className={classes.socialIcon}
+                                        aria-label={social.label}
+                                    >
+                                        {social.icon}
+                                    </ActionIcon>
+                                ))}
+                            </Group>
                         </Box>
 
-                        {/* Ở giữa: Logo chữ xanh */}
+                        {/* GIỮA: Logo */}
                         <Link href="/" className={classes.logoLink}>
                             <Text className={classes.logoText}>The Vietnam Travel</Text>
                         </Link>
 
-                        {/* Bên phải: Kính lúp & Hamburger */}
+                        {/* PHẢI: Search & Menu */}
                         <Group justify="flex-end" style={{ flex: 1 }} wrap="nowrap" className={classes.rightSection}>
-                            <ActionIcon 
-                                variant="outline" 
-                                radius="xl" 
-                                size="lg" 
+                            <ActionIcon
+                                variant="outline"
+                                radius="xl"
+                                size="lg"
                                 className={classes.searchIcon}
                             >
                                 <IoSearch size={20} strokeWidth={2} />
                             </ActionIcon>
-                            
+
                             <ActionIcon variant="transparent" size="xl" className={classes.menuIcon}>
                                 <HiMenuAlt3 size={32} />
                             </ActionIcon>
@@ -53,11 +76,11 @@ export default function MainHeader() {
                 </Container>
             </div>
 
-            {/* HÀNG 2: NỀN XANH (Thanh Điều Hướng) */}
-            <div className={classes.bottomRow}>
-                <Container size="xl" h="100%">
+            {/* HÀNG 2: Navigation */}
+            <nav className={classes.bottomRow}>
+                <Container size={1232} h="100%">
                     <Group gap={40} justify="center" align="center" h="100%" wrap="nowrap" className={classes.navGroup}>
-                        {navLinks.map((link) => (
+                        {NAV_LINKS.map((link) => (
                             <Link
                                 key={link.label}
                                 href={link.href as Route}
@@ -68,7 +91,7 @@ export default function MainHeader() {
                         ))}
                     </Group>
                 </Container>
-            </div>
+            </nav>
         </header>
     );
 }

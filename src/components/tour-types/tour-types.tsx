@@ -5,7 +5,6 @@ import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 import Image from 'next/image';
 import classes from './tour-types.module.scss';
-import '@mantine/carousel/styles.css';
 
 const TOUR_TYPES = [
   {

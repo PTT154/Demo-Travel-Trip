@@ -43,6 +43,9 @@ export default function HeroCarousel({
         plugins={[autoplay.current]}
         emblaOptions={{
           loop: true,
+          watchDrag: true,
+          watchResize: true,
+          watchSlides: true,
         }}
         classNames={{
           root: classes.carouselRoot,
