@@ -5,11 +5,14 @@ import { Container, Stack } from "@mantine/core";
 import StatsBanner from "@/components/stats-banner/stats-banner";
 import SupplierSection from "@/components/supplier-section/supplier-section";
 import TourTypes from "@/components/tour-types/tour-types";
-
+import RecentlyPublished from "@/components/recently-published/recently-published";
+import OurPartners from "@/components/our-partners/our-partners";
 
 import { MOCK_SLIDES } from "@/mocks/hero-carousel-data";
 import { SUPPLIER_DATA } from "@/mocks/suppiler-data";
 import { MOCK_TOUR_TYPES } from "@/mocks/tour-types-data";
+import { MOCK_RECENTLY_PUBLISHED } from "@/mocks/recently-published-data";
+import { MOCK_PARTNERS } from "@/mocks/partners-data";
 
 export default function Home() {
   return (
@@ -23,6 +26,8 @@ export default function Home() {
           <SupplierSection data={SUPPLIER_DATA} />
           <TourTypes data={MOCK_TOUR_TYPES} />
           <StatsBanner />
+          <RecentlyPublished data={MOCK_RECENTLY_PUBLISHED} />
+          <OurPartners data={MOCK_PARTNERS} />
         </Stack>
       </Container>
 

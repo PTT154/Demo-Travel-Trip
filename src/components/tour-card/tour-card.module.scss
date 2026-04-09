@@ -1,0 +1,113 @@
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-color: #f1f3f5;
+  background-color: var(--vinaup-white);
+
+  &:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+.imageSection {
+  position: relative;
+  overflow: hidden;
+  margin: -1rem -1rem 0 -1rem; // bù lại bằng padding="md" của Card (md = 1rem = 16px)
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+
+  .card:hover & {
+    transform: scale(1.05) translateZ(0);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(220, 235, 245, 0.9);
+  color: #fccc24;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  
+  &:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: var(--brand-green);
+  min-height: 2.8rem; // Đảm bảo luôn chiếm 2 dòng
+}
+
+.details {
+  align-items: center;
+}
+
+.clockIcon {
+  color: var(--vinaup-medium-dark-gray);
+}
+
+.duration {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--vinaup-medium-dark-gray);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #a4843b; // Màu vàng nâu của giá tiền như thiết kế
+}
+
+.currency {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  vertical-align: baseline;
+}
+
+.bookButton {
+  background-color: var(--brand-green);
+  color: var(--vinaup-white);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #09472b;
+  }
+}

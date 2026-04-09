@@ -1,0 +1,67 @@
+.wrapper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  background-color: #f8f9fa; // Màu xám rất nhạt trên background tổng thể theo như screenshot
+  border-radius: 20px;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.dashText {
+  color: #adb5bd;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 0.5;
+}
+
+.title {
+  color: var(--brand-green);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.5rem); // To cho đồng bộ
+  font-weight: 800;
+}
+
+.subtitle {
+  color: var(--vinaup-dark-gray);
+  font-size: clamp(0.875rem, 1.5vw, 1rem); // responsive text
+  max-width: 50rem;
+}
+
+.logoCard {
+  background-color: var(--vinaup-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f1f3f5;
+
+  &:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; // Giữ tỉ lệ chuẩn cho các logo ngang
+}
+
+.logoImage {
+  object-fit: contain;
+  padding: 0.5rem; // Tránh logo dính sát vào thành wrapper
+  transition: transform 0.3s ease;
+
+  .logoCard:hover & {
+    transform: scale(1.05); // Phóng to logo lên 1 xíu khi hover
+  }
+}
+
