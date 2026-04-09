@@ -22,7 +22,7 @@ interface HeroCarouselProps {
 export default function HeroCarousel({
   children,
   data,
-  height
+  height = '80vh',
 }: HeroCarouselProps) {
   const autoplay = useRef(Autoplay({
     delay: 4000,
@@ -34,7 +34,7 @@ export default function HeroCarousel({
   return (
     <Box
       className={classes.carouselWrapper}
-      style={{ height }}
+      style={{ '--carousel-height': height } as React.CSSProperties}
     >
       <Carousel
         height="100%"

@@ -3,7 +3,6 @@
 import { Title, Text, Box } from '@mantine/core';
 import Image from 'next/image';
 import classes from './supplier-card.module.scss';
-
 export interface SupplierCardProps {
   title: string;
   description: string;
@@ -12,8 +11,7 @@ export interface SupplierCardProps {
 
 export default function SupplierCard({ title, description, image }: SupplierCardProps) {
   return (
-    <Box className={classes.card}>
-      {/* Ảnh nền tối ưu bằng next/image */}
+    <Box component="article" className={classes.card}>
       <Image
         src={image}
         alt={title}
@@ -22,11 +20,10 @@ export default function SupplierCard({ title, description, image }: SupplierCard
         style={{ objectFit: 'cover' }}
         className={classes.image}
       />
-      
-      {/* Lớp phủ tối dần từ dưới lên (Gradient Overlay) */}
+
+      {/* Overlay mờ tối để chữ nổi bật hơn trên nền ảnh */}
       <div className={classes.overlay} />
 
-      {/* Nội dung chữ ở góc dưới */}
       <div className={classes.content}>
         <Title order={3} className={classes.title}>{title}</Title>
         <Text className={classes.description}>{description}</Text>

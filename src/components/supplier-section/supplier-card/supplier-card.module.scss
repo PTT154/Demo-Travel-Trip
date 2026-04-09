@@ -1,19 +1,19 @@
 .card {
   position: relative;
-  aspect-ratio: 3 / 4; // Tỷ lệ khung hình đứng giống trong thiết kế
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  aspect-ratio: 3 / 4;
+  border-radius: 1rem; // 16px
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.4); // 0 4px 12px
   overflow: hidden;
   cursor: pointer;
-  
-  // Hiệu ứng nhấc thẻ lên một chút khi hover
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    
+    transform: translateY(-0.5rem); // -8px
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15); // 0 12px 24px
+
     .image {
-      transform: scale(1.05); // Zoom nhẹ ảnh
+      transform: scale(1.05);
     }
   }
 }
@@ -22,11 +22,11 @@
   transition: transform 0.5s ease;
 }
 
-// Phủ gradient đen từ dưới lên để đọc chữ rõ hơn
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 50%);
+  // Gradient mượt hơn một chút
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%);
   z-index: 1;
 }
 
@@ -35,18 +35,24 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 20px;
+  padding: 1.25rem 0.75rem; // 20px 12px
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
 }
 
 .title {
   color: white;
-  font-size: clamp(18px, 1.5vw, 22px);
+  font-size: clamp(1.125rem, 1.5vw, 1.375rem); // Từ 18px đến 22px
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem; // 4px
 }
 
 .description {
   color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem); // Từ 14px đến 18px
 }

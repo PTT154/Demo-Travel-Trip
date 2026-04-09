@@ -67,6 +67,10 @@
     }
 }
 
+.navContainer {
+    padding: 0;
+}
+
 // --- RESPONSIVE ---
 @media (max-width: 768px) {
     .btnContainer {
@@ -84,7 +88,6 @@
     .navGroup {
         gap: 1rem; // 16px
         overflow-x: auto;
-        padding: 0 0.625rem; // 10px
     }
 }
 

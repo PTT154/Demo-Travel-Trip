@@ -1,0 +1,18 @@
+.wrapper {
+  margin-bottom: 2rem; // 32px
+}
+
+.title {
+  color: var(--brand-green);
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem); // Từ 28px đến 40px
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.description {
+  color: var(--brand-black-text);
+  max-width: 50rem; // 800px
+  font-size: clamp(1rem, 1.5vw, 1.125rem); // Từ 16px đến 18px
+  line-height: 1.6;
+}

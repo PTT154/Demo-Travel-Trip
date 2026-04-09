@@ -2,7 +2,7 @@
 
 import { Group, ActionIcon, Text, Box, Container } from '@mantine/core';
 import { IoSearch } from "react-icons/io5";
-import { HiMenuAlt3 } from "react-icons/hi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import classes from './main-header.module.scss';
 import Link from 'next/link';
@@ -69,7 +69,7 @@ export default function MainHeader() {
                             </ActionIcon>
 
                             <ActionIcon variant="transparent" size="xl" className={classes.menuIcon}>
-                                <HiMenuAlt3 size={32} />
+                                <RxHamburgerMenu size={32} />
                             </ActionIcon>
                         </Group>
                     </Group>
@@ -78,7 +78,7 @@ export default function MainHeader() {
 
             {/* HÀNG 2: Navigation */}
             <nav className={classes.bottomRow}>
-                <Container size={1232} h="100%">
+                <Container size={1232} h="100%" classNames={{ root: classes.navContainer }}>
                     <Group gap={40} justify="center" align="center" h="100%" wrap="nowrap" className={classes.navGroup}>
                         {NAV_LINKS.map((link) => (
                             <Link
