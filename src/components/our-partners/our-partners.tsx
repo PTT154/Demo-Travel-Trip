@@ -4,18 +4,9 @@ import { Box, SimpleGrid, Text } from '@mantine/core';
 import Image from 'next/image';
 import classes from './our-partners.module.scss';
 import SectionHeader from '../heading-title-group/section-header/section-header';
+import { MOCK_PARTNERS } from '@/mocks/partners-data';
 
-interface PartnerItem {
-  id: number;
-  name: string;
-  image: string;
-}
-
-interface OurPartnersProps {
-  data: PartnerItem[];
-}
-
-export default function OurPartners({ data }: OurPartnersProps) {
+export default function OurPartners() {
   return (
     <Box component="section" className={classes.wrapper}>
       <Box ta="center">
@@ -36,7 +27,7 @@ export default function OurPartners({ data }: OurPartnersProps) {
         spacing={{ base: 'xs', sm: 'lg' }}
         verticalSpacing={{ base: 'xs', sm: 'lg' }}
       >
-        {data.map((partner) => (
+        {MOCK_PARTNERS.map((partner) => (
           <div key={partner.id} className={classes.logoCard}>
             <div className={classes.imageWrapper}>
               <Image
