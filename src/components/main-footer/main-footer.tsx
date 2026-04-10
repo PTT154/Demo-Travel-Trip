@@ -1,8 +1,7 @@
 'use client';
-import React from "react";
 import classes from "./main-footer.module.scss";
 import { Container, Grid, Text, Group, ActionIcon } from "@mantine/core";
-import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaChevronUp, FaArrowRight } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaArrowRight } from "react-icons/fa6";
 
 const FOOTER_LINKS = [
     {
