@@ -1,12 +1,13 @@
-.wrapper {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
+@import '../../app/mixins';
 
 .headerContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (max-width: 48em) {
+    gap: 0.5rem;
+  }
 }
 
 .titleRow {
@@ -15,46 +16,45 @@
 
 .titleIcon {
   object-fit: contain;
-  border-radius: 50%; // just in case
+  border-radius: 50%;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
 }
 
 .title {
-  color: var(--brand-green);
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.5vw, 2.5rem); // To tương đương với section khác
-  font-weight: 800;
+  @include heading-title;
 }
 
 .controlRow {
   align-items: center;
-  flex-wrap: wrap; // Cho phep rớt dòng trên mobile
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
+
+  @media (max-width: 48em) {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
 }
 
 .filterGroup {
   align-items: center;
-  
-  @media (max-width: 36rem) {
-    flex-wrap: nowrap; // giu nut filter va category
-    overflow-x: auto;
-    width: 100%;
-    padding-bottom: 0.5rem;
-    
-    // Hide scrollbar
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    -ms-overflow-style: none;  // IE and Edge
-    scrollbar-width: none;  // Firefox
+
+  @media (max-width: 48em) {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 }
 
 .filterButton {
   border-color: #dee2e6;
   color: var(--vinaup-black);
-  font-weight: 600;
+  font-weight: 500;
   transition: background-color 0.2s ease;
-  border-radius: 20px; // Bo viền tròn nhiều một chút
+  border-radius: 20px;
+  font-size: 1rem;
 
   &:hover {
     background-color: var(--vinaup-soft-gray);
@@ -66,16 +66,21 @@
   font-weight: 600;
   color: var(--vinaup-dark-gray);
   font-size: 1rem;
-  white-space: nowrap; // tránh đứt chữ
+  white-space: nowrap;
+  display: flex;
+
+  @media (max-width: 48em) {
+    display: none; // ẩn hoàn toàn trên mobile
+  }
 }
 
 .category {
-  color: var(--vinaup-dark-gray); // hoac mau den nhat
+  color: var(--vinaup-dark-gray);
   position: relative;
   transition: color 0.2s ease;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
-  
+
   &:hover {
     color: var(--vinaup-black);
   }
@@ -84,14 +89,20 @@
 .categoryActive {
   color: var(--vinaup-black);
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .rightControls {
+  display: flex;
   align-items: center;
-  white-space: nowrap; // ko rớt dòng
+  white-space: nowrap;
+  gap: 0.5rem;
+
+  @media (max-width: 48em) {
+    gap: 0.25rem;
+  }
 }
 
 .viewAllText {
@@ -101,6 +112,11 @@
   text-underline-offset: 4px;
   margin-right: 0.5rem;
   font-size: 1rem;
+
+  @media (max-width: 48em) {
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+  }
 
   &:hover {
     color: #09472b;

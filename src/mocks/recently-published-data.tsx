@@ -2,7 +2,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 1,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -12,7 +12,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 2,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -22,7 +22,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 3,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -32,7 +32,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 4,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -42,7 +42,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 5,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -52,7 +52,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 6,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -62,7 +62,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 7,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
@@ -72,7 +72,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
   {
     id: 8,
     title: 'Ha Long Bay Luxury Cruise Ha Long Bay Luxury Cruise',
-    image: 'https://images.unsplash.com/photo-1528127269322-53982823b185?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1643030595382-79273ae819d9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',

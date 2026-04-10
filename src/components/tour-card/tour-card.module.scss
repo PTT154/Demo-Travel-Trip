@@ -1,7 +1,9 @@
 .card {
+  position: relative; // THÊM DÒNG NÀY: Để làm thẻ cha neo vị trí cho Badge và Icon
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border-color: #f1f3f5;
   background-color: var(--vinaup-white);
+  padding: 0; // Loại bỏ padding mặc định của Card để dễ căn chỉnh ảnh và nội dung
 
   &:hover {
     transform: translateY(-0.25rem);
@@ -12,7 +14,6 @@
 .imageSection {
   position: relative;
   overflow: hidden;
-  margin: -1rem -1rem 0 -1rem; // bù lại bằng padding="md" của Card (md = 1rem = 16px)
 }
 
 .imageWrapper {
@@ -33,24 +34,43 @@
 
 .badge {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: rgba(220, 235, 245, 0.9);
-  color: #fccc24;
+  top: 0.75rem; // Căn bằng lề trên của thẻ Card
+  left: 0.75rem; // Căn bằng lề trái của thẻ Card
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: goldenrod;
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-weight: 700;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: none;
+
+  @media (max-width: 48em) {
+    top: 0.5rem;
+    left: 0.5rem;
+    transform: scale(0.85);
+    transform-origin: top left;
+  }
 }
 
 .heartIcon {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  background-color: rgba(255, 255, 255, 0.9);
-  
+  top: 0.75rem; // Căn bằng lề trên
+  right: 0.75rem; // Căn bằng lề phải
+  z-index: 2;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 32px;
+  height: 32px;
+
+  @media (max-width: 48em) {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+  }
+
   &:hover {
     background-color: #ffffff;
     transform: scale(1.1);
@@ -61,15 +81,24 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 0.75rem;
+
+  @media (max-width: 48em) {
+    padding: 0.5rem;
+  }
 }
 
 .title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.4;
   color: var(--brand-green);
-  min-height: 2.8rem; // Đảm bảo luôn chiếm 2 dòng
+  line-height: 1.4;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  min-height: 2.8rem;
+
+  @media (max-width: 48em) {
+    min-height: 2.6rem;
+  }
 }
 
 .details {
@@ -78,22 +107,26 @@
 
 .clockIcon {
   color: var(--vinaup-medium-dark-gray);
+
+  @media (max-width: 48em) {
+    width: 12px;
+  }
 }
 
 .duration {
   font-weight: 500;
-  font-size: 0.9rem;
   color: var(--vinaup-medium-dark-gray);
+  font-size: clamp(0.75rem, 2vw, 0.9rem); // 12px -> 14.4px
 }
 
 .price {
   font-weight: 700;
-  font-size: 1rem;
-  color: #a4843b; // Màu vàng nâu của giá tiền như thiết kế
+  color: #a4843b;
+  font-size: clamp(0.875rem, 2.5vw, 1rem); // 14px -> 16px
 }
 
 .currency {
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   vertical-align: baseline;
@@ -104,8 +137,14 @@
   color: var(--vinaup-white);
   font-family: var(--font-main);
   font-weight: 600;
-  font-size: 1rem;
   transition: all 0.2s ease;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  height: 2.5rem;
+
+  @media (max-width: 48em) {
+    height: 2.25rem;
+    padding: 0 0.5rem;
+  }
 
   &:hover {
     background-color: #09472b;

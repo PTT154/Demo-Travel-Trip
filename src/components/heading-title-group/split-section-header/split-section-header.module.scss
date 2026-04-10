@@ -1,13 +1,11 @@
+@import '../../../app/mixins';
+
 .wrapper {
   margin-bottom: 2rem; // 32px - Tạo khoảng cách với phần Carousel bên dưới
 }
 
 .title {
-  color: var(--brand-green);
-  font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw, 2.5rem); // 28px đến 40px
-  font-weight: 800;
-  line-height: 1.2;
+  @include heading-title;
   flex: 1; // Cho phép Title chiếm không gian bên trái
 }
 

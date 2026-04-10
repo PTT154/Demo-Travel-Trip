@@ -26,7 +26,22 @@ export default function TourCard({
   isFavorite,
 }: TourCardProps) {
   return (
-    <Card padding="md" radius="lg" className={classes.card} shadow="sm" withBorder>
+    <Card radius="lg" className={classes.card} shadow="sm" withBorder>
+      {badge && (
+        <Badge className={classes.badge} radius="xl">
+          {badge}
+        </Badge>
+      )}
+
+      <ActionIcon
+        className={classes.heartIcon}
+        variant="white"
+        radius="xl"
+        aria-label="Add to favorites"
+      >
+        <FaHeart size={16} color={isFavorite ? 'var(--vinaup-red)' : '#ced4da'} />
+      </ActionIcon>
+
       <Card.Section className={classes.imageSection}>
         <div className={classes.imageWrapper}>
           <Image
@@ -37,30 +52,14 @@ export default function TourCard({
             className={classes.image}
           />
         </div>
-        
-        {badge && (
-          <Badge className={classes.badge} radius="xl" size="lg">
-            {badge}
-          </Badge>
-        )}
-
-        <ActionIcon
-          className={classes.heartIcon}
-          variant="white"
-          radius="xl"
-          size="lg"
-          aria-label="Add to favorites"
-        >
-          <FaHeart size={16} color={isFavorite ? 'var(--vinaup-red)' : '#ced4da'} />
-        </ActionIcon>
       </Card.Section>
 
-      <Box mt="md" className={classes.content}>
+      <Box className={classes.content}>
         <Text className={classes.title} lineClamp={2} title={title}>
           {title}
         </Text>
 
-        <Group justify="space-between" mt="md" mb="md" className={classes.details}>
+        <Group justify="space-between" my={12} className={classes.details}>
           <Group gap={6}>
             <FaRegClock size={14} className={classes.clockIcon} />
             <Text className={classes.duration}>{duration}</Text>
@@ -70,7 +69,7 @@ export default function TourCard({
           </Text>
         </Group>
 
-        <Button fullWidth radius="md" size="md" className={classes.bookButton} component={Link} href="#">
+        <Button fullWidth radius="md" className={classes.bookButton} component={Link} href="#">
           Booking Now
         </Button>
       </Box>

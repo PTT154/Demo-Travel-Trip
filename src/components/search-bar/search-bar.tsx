@@ -34,7 +34,7 @@ export default function SearchBar() {
 
         {/* 2. Ô Nhập liệu */}
         <TextInput
-          placeholder="Enter Destination..."
+          placeholder="Type a keyword..."
           variant="unstyled"
           className={classes.searchInput}
         />

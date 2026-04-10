@@ -26,15 +26,15 @@ export default function RecentlyPublished({ data }: RecentlyPublishedProps) {
   return (
     <Box component="section" className={classes.wrapper}>
       {/* HEADER SECTION */}
-      <Box mb="2rem" className={classes.headerContainer}>
+      <Box mb={{ base: '0.5rem', sm: '1rem' }} className={classes.headerContainer}>
         {/* Hàng 1: Tiêu đề */}
-        <Group gap="md" mb="md" className={classes.titleRow}>
-          <Image 
-            src="/vinaup-favicon.ico" // Thay thế bằng logo thực tế, hoặc xoá nếu không muốn icon
-            alt="icon" 
-            width={40} 
-            height={40} 
-            className={classes.titleIcon} 
+        <Group gap="sm" className={classes.titleRow}>
+          <Image
+            src="/favicon.ico" // Thay thế bằng logo thực tế, hoặc xoá nếu không muốn icon
+            alt="icon"
+            width={50}
+            height={50}
+            className={classes.titleIcon}
             onError={(e) => {
               // phòng trường hợp không có ảnh
               e.currentTarget.style.display = 'none';
@@ -56,7 +56,7 @@ export default function RecentlyPublished({ data }: RecentlyPublishedProps) {
             >
               Filter
             </Button>
-            
+
             <Group gap="md" className={classes.categories}>
               <UnstyledButton className={classes.categoryActive}>Ha Long</UnstyledButton>
               <UnstyledButton className={classes.category}>Ha Noi</UnstyledButton>
@@ -79,10 +79,10 @@ export default function RecentlyPublished({ data }: RecentlyPublishedProps) {
       </Box>
 
       {/* GRID NHỮNG TOUR CARDS CHÍNH NẰM DƯỚI ĐÂY */}
-      <SimpleGrid 
-        cols={{ base: 1, xs: 2, sm: 2, md: 3, lg: 4 }} 
-        spacing="lg" 
-        verticalSpacing="xl"
+      <SimpleGrid
+        cols={{ base: 2, sm: 3, md: 3, lg: 4 }}
+        spacing={{ base: 'xs', sm: 'lg' }}
+        verticalSpacing={{ base: 'xs', sm: 'lg' }}
       >
         {data.map((item) => (
           <TourCard key={item.id} {...item} />
