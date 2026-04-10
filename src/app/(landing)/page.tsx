@@ -31,8 +31,6 @@ export default function Home() {
           <OurPartners />
         </Stack>
       </Container>
-
-      <div style={{ height: '2000px' }} />
     </main>
   );
 }
