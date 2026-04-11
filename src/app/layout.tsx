@@ -18,8 +18,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Demo Travel Trip",
-  description: "Demo Travel Trip",
+  title: "The Local Travel",
+  description: "Discover the world with us! Explore hidden gems, local culture, and unforgettable experiences. Your adventure starts here.",
 };
 
 export default function RootLayout({
