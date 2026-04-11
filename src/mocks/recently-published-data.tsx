@@ -6,7 +6,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -16,7 +16,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -26,7 +26,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -36,7 +36,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -46,7 +46,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -56,7 +56,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -66,7 +66,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
   {
@@ -76,7 +76,7 @@ export const MOCK_RECENTLY_PUBLISHED = [
     duration: '3 Days',
     price: '2.500.000',
     currency: 'đ',
-    badge: 'Best seller',
+    badge: 'HOT',
     isFavorite: true,
   },
 ];

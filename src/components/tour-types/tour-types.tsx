@@ -22,7 +22,7 @@ export default function TourTypes({ data }: TourTypesProps) {
       {/* HEADER */}
       <SplitSectionHeader
         title="Vietnam tour types"
-        description="The Vietnam Travel is your premier destination, where we showcase a wide variety of tours offered by carefully selected and trusted travel agents."
+        description="The Local Travel is your premier destination, where we showcase a wide variety of tours offered by carefully selected and trusted travel agents."
       />
 
       {/* CAROUSEL */}

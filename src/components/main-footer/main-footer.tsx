@@ -60,7 +60,7 @@ export default function MainFooter() {
                 <Container size={1232}>
                     <div className={classes.bottomBarInner}>
                         <Text className={classes.copyright}>
-                            Vietnam Travel © {new Date().getFullYear()} by VinaUp
+                            The Local Travel © {new Date().getFullYear()} by VinaUp
                         </Text>
 
                         <Group gap="sm" className={classes.socials}>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, SimpleGrid, Text } from '@mantine/core';
+import { Box, SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
 import classes from './our-partners.module.scss';
 import SectionHeader from '../heading-title-group/section-header/section-header';
@@ -9,11 +9,6 @@ import { MOCK_PARTNERS } from '@/mocks/partners-data';
 export default function OurPartners() {
   return (
     <Box component="section" className={classes.wrapper}>
-      <Box ta="center">
-        <Text classNames={{ root: classes.dashText }} mb="xs">
-          ----
-        </Text>
-      </Box>
       <SectionHeader
         title="Our partners"
         description="Collaborating with industry leaders to ensure your journey is seamless and safe."

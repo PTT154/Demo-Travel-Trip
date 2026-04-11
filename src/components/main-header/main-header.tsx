@@ -54,7 +54,7 @@ export default function MainHeader() {
 
                         {/* GIỮA: Logo */}
                         <Link href="/" className={classes.logoLink}>
-                            <Text className={classes.logoText}>The Vietnam Travel</Text>
+                            <Text className={classes.logoText}>The Local Travel</Text>
                         </Link>
 
                         {/* PHẢI: Search & Menu */}
